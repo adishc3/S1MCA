@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>ODDorEVEN</title>
+    </head>
+    <body>
+        <div>
+            
+        <form name="f1">
+            Enter a Number:<input type="text" name="num1">
+            
+            <button type="button" onclick="check()" > submit</button>
+            <p id="Result"></p>
+        </form>
+      
+        <script>
+            function check()
+            {
+                let num=parseInt(document.forms.f1.num1.value);
+                if(num%2==0)
+            {
+                document.getElementById("Result").innerHTML="is even";
+                
+            }
+            else
+            document.getElementById("Result").innerHTML="is odd";
+            }
+        </script>
+         </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Registration form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body background="/home/user/Downloads/mar.jpeg" font-family="">
+        
+        <div style="width:auto;height:auto;margin-left:500;margin-right:500;margin-bottom:500;margin-top:300;background-color:rgb(255, 241, 225);font-family:Helvetica Neue;">
+        <form name="f1">
+            Name: <input type="text" id="name" style="width:400px;margin-left:8px"><br><br>
+            Phone number: <input type="text" id="ph"style="width:330px;margin-left:8px"><br><br>
+            Email id: <input type="text" id="email" style="width:381px;margin-left:8px">
+            <br>
+            <br>
+            Password : <input type="password" id="pass" style="width:367px;margin-left:8px">
+            <br>
+            <br>
+            confirm password: <input type="password" id="conf" style="width:304px;margin-left:8px">
+            <br>
+            <br>
+            <input type="button" value="submit" onclick="check()">
+        </form>
+        <script>
+            function check()
+            {
+                let email=document.forms.f1.email.value;
+                let pass=document.forms.f1.pass.value;
+                let con=document.forms.f1.conf.value;
+                let phn=document.forms.f1.ph.value;
+                if(email=="")
+            {
+                alert("nothing");
+            }
+               if(phn.length!=10)
+            {
+                alert("Invalid phone number!!");
+            }
+                if(pass.length<6)
+            {
+                alert("password not strong enough!");
+            }
+                if(pass!=con)
+            {
+                alert("Password does not match");
+                alert("try again");
+            }
+
+            }
+        </script>
+        </div>
+    </body>
+</html>
